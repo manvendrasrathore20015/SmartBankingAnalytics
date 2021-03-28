@@ -25,7 +25,7 @@ pickle_load=data_ingestion.data_getter()
 # load models stored in compressed pickle files ..
 ss_LA = pickle_load.decompress_pickle('pickle_files/LA_Std_scaler.pbz2')
 model_LA = pickle_load.decompress_pickle('pickle_files/DTModel-1.pbz2')
-model_Fraud = joblib.load('pickle_files/Fraud_new_model.pkl')
+model_Fraud = pickle_load.decompress_pickle('pickle_files/Fraud_rf_new_model.pbz2')
 model_LR = pickle_load.decompress_pickle('pickle_files/loan_risk.pbz2')
 model_LE = pickle_load.decompress_pickle('pickle_files/LE-DecTreeModel.pbz2')
 model_MA = pickle_load.decompress_pickle('pickle_files/Mortgage_RE.pbz2')
