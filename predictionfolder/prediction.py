@@ -37,7 +37,7 @@ class Fraud_predict():
             # ============  pandas-prof. report ============================
             new_data.to_csv(r'graph_input_files\graph_data.csv', index_label=False)
             # ==============================================================
-            model_Fraud = joblib.load('pickle_files/Fraud_new_model.pkl')
+            model_Fraud = instance1.decompress_pickle('pickle_files/Fraud_rf_new_model.pbz2')
             result = model_Fraud.predict(new_data)
 
             new_data['output'] = result
